@@ -1,0 +1,80 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+
+# =============== #
+# Unity generated #
+# =============== #
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+/Assets/assets/
+
+# ============================================= #
+# Visual Studio / Rider / MonoDevelop / VSCode #
+# ============================================= #
+.vs/
+.vscode/
+*.userprefs
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userosscache
+*.xap
+*.dll
+*.pdb
+*.exe
+*.pdf
+*.mid
+*.midi
+*.wav
+*.gif
+*.ico
+*.jpg
+*.jpeg
+*.png
+*.psd
+*.tga
+*.bmp
+*.tiff
+*.tif
+*.3ds
+*.3DS
+*.fbx
+*.FBX
+*.lxo
+*.LXO
+*.ma
+*.MA
+*.obj
+*.OBJ
+*.ogg
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.mpeg
+*.MPEG
+*.mpg
+*.MPG
+*.asf
+*.ASF
+*.avi
+*.AVI
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+Thumbs.db
+Desktop.ini
+
+.idea/
+
