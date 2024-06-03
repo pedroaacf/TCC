@@ -15,21 +15,19 @@ public class PlayerPickup : MonoBehaviour
         {
             if (!heldObject) // Se o jogador não estiver segurando nada
             {
-                // Raycast para detectar objetos próximos que podem ser pegos
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.forward, out hit, 99f))
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2f);
+                foreach (Collider hitCollider in hitColliders)
                 {
-                    Debug.Log("teste3");
-                    if (hit.collider.CompareTag("Player")) // Se o objeto pode ser pego
+                    if (hitCollider.CompareTag("Player"))
                     {
                         heldObject = true;
                         GetComponent<Rigidbody>().isKinematic = true; // Impede a física enquanto estiver segurando
                         transform.SetParent(handTransform); // Coloca o objeto na mão do jogador
                         transform.localPosition = Vector3.zero; // Reposiciona o objeto na mão do jogador
+                        break;
                     }
                 }
-            }
-            else // Se o jogador estiver segurando algo, largue o objeto
+            } else // Se o jogador estiver segurando algo, largue o objeto
             {
                 GetComponent<Rigidbody>().isKinematic = false; // Ativa a física do objeto
                 transform.SetParent(null); // Libera o objeto da mão do jogador
